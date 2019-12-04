@@ -1,2 +1,24 @@
 server:
   port: 8181
+
+---
+
+spring:
+  application:
+    name: frontend
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+
+---
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  #        exclude: threaddump,heapdump
+  endpoint:
+    health:
+      show-details: always
